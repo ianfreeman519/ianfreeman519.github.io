@@ -84,7 +84,7 @@ footer {
 }
 
 /* Image on the right */
-.home-image img {
+.home-content .home-image img {
     max-width: 200px;
     border-radius: 50%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
