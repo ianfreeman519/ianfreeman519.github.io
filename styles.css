@@ -69,3 +69,33 @@ footer {
     width: 100%;
     bottom: 0;
 }
+
+/* Home section content layout */
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Text on the left */
+.home-text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+/* Image on the right */
+.home-image img {
+    max-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section transitions */
+.content-section {
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.content-section[style*="display: block;"] {
+    opacity: 1;
+}
