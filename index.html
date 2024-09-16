@@ -8,53 +8,55 @@
     <script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Ian Freeman</h1>
-        <p>Michigan State University - PhD Student in Computational Mathematics, Science, and Engineering</p>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="#home" onclick="showSection('home')">Home</a></li>
-            <li><a href="#about" onclick="showSection('about')">About</a></li>
-            <li><a href="#research" onclick="showSection('research')">Research</a></li>
-            <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <section id="home" class="content-section">
-        <div class="home-content">
-            <div class="home-text">
-                <h2>Welcome to My Research Website</h2>
-                <p>Idk what to put here</p>
+    <div class="main-content">
+        <header>
+            <h1>Ian Freeman</h1>
+            <p>Michigan State University - PhD Student in Computational Mathematics, Science, and Engineering</p>
+        </header>
+        
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="showSection('home')">Home</a></li>
+                <li><a href="#about" onclick="showSection('about')">About</a></li>
+                <li><a href="#research" onclick="showSection('research')">Research</a></li>
+                <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+            </ul>
+        </nav>
+        
+        <section id="home" class="content-section">
+            <div class="home-content">
+                <div class="home-text">
+                    <h2>Welcome to My Research Website</h2>
+                    <p>This is the home section where you can find the latest updates about my research and projects.</p>
+                </div>
+                <div class="home-image">
+                    <img src="images/headshot.jpg" alt="Ian Freeman's Headshot">
+                </div>
             </div>
-            <div class="home-image">
-                <img src="images/headshot.jpg" alt="Ian Freeman's Headshot">
-            </div>
-        </div>
-    </section>
-    
-    <section id="about" class="content-section" style="display:none;">
-        <h2>About My Research Journey</h2>
-        <p>
-            At Illinois State University, I studied physics and math. 
-            I was always interested in computational modeling, which led me to pursue research with Dr. Matt Caplan on modeling white dwarf stellar interiors.
-            Fascinated by plasma physics, I have continued my research in physics simulations with Dr. Brian O'Shea as a PhD student in Computational Mathematics, Science, and Engineering at Michigan State University.
-            I now model high energy density environments using a variation of the astrophysical magneto hydrodynamical fluid solver Athena.
-            I am largely interested in fusion energy applications, which has led me to an interest in multi-scale modeling (how to connect the physics of small things to the large-scale behavior of systems).
-        </p>
-    </section>
-    
-    <section id="research" class="content-section" style="display:none;">
-        <h2>Current Research</h2>
-        <p>Fill out with info about Magnetic reconnection and/or mhd stuff.</p>
-    </section>
-    
-    <section id="contact" class="content-section" style="display:none;">
-        <h2>Contact Information</h2>
-        <p>If you would like to get in touch with me, please reach out via email at <a href="mailto:freem386@msu.edu">freem386@msu.edu</a>.</p>
-    </section>
-    
+        </section>
+        
+        <section id="about" class="content-section" style="display:none;">
+            <h2>About My Research Journey</h2>
+            <p>
+                At Illinois State University, I studied physics and math. 
+                I was always interested in computational modeling, which led me to pursue research with Dr. Matt Caplan on modeling white dwarf stellar interiors.
+                Fascinated by plasma physics, I have continued my research in physics simulations with Dr. Brian O'Shea as a PhD student in Computational Mathematics, Science, and Engineering at Michigan State University.
+                I now model high energy density environments using a variation of the astrophysical magneto hydrodynamical fluid solver Athena.
+                I am largely interested in fusion energy applications, which has led me to an interest in multi-scale modeling (how to connect the physics of small things to the large-scale behavior of systems).
+            </p>
+        </section>
+        
+        <section id="research" class="content-section" style="display:none;">
+            <h2>Current Research</h2>
+            <p>Here you can find detailed information about my current research projects, publications, and more.</p>
+        </section>
+        
+        <section id="contact" class="content-section" style="display:none;">
+            <h2>Contact Information</h2>
+            <p>If you would like to get in touch with me, please reach out via email at <a href="mailto:ian.freeman@example.com">ian.freeman@example.com</a>.</p>
+        </section>
+    </div>
+
     <footer>
         <p>&copy; 2024 | Ian Freeman Research Website</p>
         <p>Last Updated August 2024</p>
