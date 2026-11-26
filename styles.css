@@ -97,12 +97,11 @@ footer {
     position: static;
 }
 
-/* Section transitions */
-.content-section {
-    transition: opacity 0.5s ease-in-out;
-    opacity: 0;
-}
-
-.content-section[style*="display: block;"] {
-    opacity: 1;
+footer a { color: inherit; }
+.movies { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+.movies figure { margin: 0; }
+.movies video { width: 100%; }
+@media (max-width: 650px) {
+    .movies { grid-template-columns: 1fr; }
+    .home-content { flex-direction: column; }
 }

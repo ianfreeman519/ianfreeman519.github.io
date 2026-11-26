@@ -1,0 +1,62 @@
+<h2>Pulsed Power and HEDP</h2>
+<p>
+    In my PhD work I'm modeling terrestrial plasma experiments focused on an experiment performed in 2022 at Sandia's Z Machine.
+    The Z Machine pumps nearly 20MA of current through a ~3cm target (in this case two cylindrical aluminum wire arrays) to produce a sheet of plasma that undergoes magnetic reconnection.
+    Reconnection is the ubiquitous plasma process that explosively converts magnetic fields into kinetic and thermal energy, and can dramatically change the topology of the magnetic field.
+    It's currently an open question in plasma physics how reconnection occurs in systems that strongly radiatively cool, the focus of my research!
+    I study this problem using the code AthenaPK, a 3D resistive magnetohydrodynamics code that I help develop.
+    This system is in the high energy density plasma (HEDP) regime, which is important for a number of applications like inertial confinement fusion.
+    This research has implications for understanding the behavior of plasmas in extreme conditions, which is relevant to both astrophysical and laboratory plasma environments. 
+    By simulating these processes, we can gain insight into the fundamental physics important for future fusion experiments and reactor designs.
+    
+</p>
+
+<p>
+    Below you can see two renderings of the so-called Magnetic Reconnection on Z (MARZ) experiments, which create the reconnection layer I mention above.
+    The current from the pulsed power driver in this frame flows out of page in the central conductors (top and bottom solid circles) and back into the page through the 150 wires surrounding the conductor.
+    The plasma is modeled as an ideal gas with Spitzer resistivity and free-free cooling.
+    Some of the important physics in these simulations are missing: tabulated equations of state, more complete radiation transport, and more realistic vacuum resistivity models.
+    These physics modules are in the works, and once testing is complete, will be added to AthenaPK soon!
+    The left panel shows the mass density of the plasma, and the right panel shows the curl of the magnetic field (directly proportional to the current density).
+    Successful simulations of this system expect to see a current sheet form, and then destabilize to the tearing instability, forming loops of magnetic fields and secondary current sheets in between.
+</p>
+<div class="movies">
+    <figure>
+        <video controls preload="none" playsinline aria-label="Plasma mass density" src="movies/uctaff3_density.mp4"></video>
+        <figcaption>Plasma mass density</figcaption>
+    </figure>
+    <figure>
+        <video controls preload="none" playsinline aria-label="Curl of the magnetic field (z component)" src="movies/uctaff3_zoomed_curlBz.mp4"></video>
+        <figcaption>Curl of the magnetic field (z component)</figcaption>
+    </figure>
+</div>
+
+<h2>Crystallization of Heavy Elements in White Dwarf Plasmas</h2>
+<p>
+    During my undergraduate research at Illinois State University, I worked with Dr. Matt Caplan to model the crystallization of heavy elements in white dwarf plasmas.
+    These plasmas, unlike the terrestrial plasmas I now study, are strongly coupled, meaning that the potential energy of the system is much larger than the kinetic energy.
+    Instead of treating this system as a fluid, we must directly resolve individual ions and their interactions with each other through a screened Coulomb potential.
+    When the coupling parameter (ratio of potential to kinetic energy) is sufficiently large, the heaviest ions (iron in the simulation below) form BCC crystal lattices in a background of carbon/oxygen.
+    The crystallization of these heavy elements changes the material properties of the white dwarf, and can have impacts on their cooling curves.
+    This has direct impacts on the age estimates of white dwarfs, which are often used to "date" the age of their host galaxies.
+</p>
+
+<p>
+    The figures below show the results of a molecular dynamics simulation of a carbon/oxygen/iron plasma at near-white dwarf densities and temperatures.
+    Because of the large number of particles in these simulations (near 56k ions), we cannot directly visualize the entire star, or even watch crystal formation.
+    Since MD simulations use reversible Newtonian physics, a simulation which shows an initially stable crystal melts indicates an environment in which a crystal will never form, whereas a simulation demonstrating a stable crystal indicates an environment in which crystals can form.
+    The left animation shows the background carbon/oxygen plasma, which fades in and out as the simulation progresses.
+    The right animation shows two different simulations over time: the top shows an unstable crystal environment, while the bottom shows a stable crystal environment.
+    These simulations were just three of many performed to determine the stability environment of these crystals. 
+    The final fraction of iron in the crystal relative to the background indicates the precipitation fraction, the parameter of interest for determining the effect of crystallization on the star.
+</p>
+<div class="movies">
+    <figure>
+        <video controls preload="none" playsinline aria-label="Iron crystal in the carbon/oxygen plasma" src="movies/crystals_in_background.mp4"></video>
+        <figcaption>Iron crystal in the carbon/oxygen plasma</figcaption>
+    </figure>
+    <figure>
+        <video controls preload="none" playsinline aria-label="Iron crystal size over time" src="movies/crystal_size_over_time.mp4"></video>
+        <figcaption>Iron crystal size over time</figcaption>
+    </figure>
+</div>

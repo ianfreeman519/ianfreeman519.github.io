@@ -1,22 +1,26 @@
-function showSection(sectionId) {
-    // Default to 'home' section if sectionId is empty or '#home'
-    if (!sectionId || sectionId === 'home') {
-        sectionId = 'home';
+function showSection() {
+    const active = location.hash === '#research' ? 'research' : 'home';
+    for (const section of document.querySelectorAll('.content-section')) {
+        section.hidden = section.id !== active;
+        if (section.hidden) {
+            section.querySelectorAll('video').forEach(video => video.pause());
+        }
     }
-
-    // Hide all content sections
-    const sections = document.querySelectorAll('.content-section');
-    sections.forEach(section => {
-        section.style.display = 'none';
-    });
-    
-    // Show the selected content section
-    const selectedSection = document.getElementById(sectionId);
-    selectedSection.style.display = 'block';
 }
 
-// Check the hash on page load and display the correct section
-document.addEventListener('DOMContentLoaded', () => {
-    const currentHash = window.location.hash.substring(1);
-    showSection(currentHash);
-});
+async function loadCopy(name) {
+    const container = document.getElementById(name + '-copy');
+    try {
+        const response = await fetch('content/' + name + '.html');
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        container.innerHTML = await response.text();
+    } catch (error) {
+        console.error(error);
+        container.textContent = 'This section could not be loaded. Please refresh to try again.';
+    }
+}
+
+window.addEventListener('hashchange', showSection);
+showSection();
+loadCopy('home');
+loadCopy('research');
